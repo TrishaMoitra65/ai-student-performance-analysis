@@ -1553,6 +1553,8 @@
 
 
 from flask import Flask, request, jsonify
+from flask import Flask
+from flask_cors import CORS
 from flask_cors import CORS
 from flask_jwt_extended import (
     JWTManager,
@@ -1572,7 +1574,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 # ---------------- INIT ----------------
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://ai-student-performance-analysis-9.onrender.com"])
 
 app.config["JWT_SECRET_KEY"] = "final-year-project-secret"
 jwt = JWTManager(app)
