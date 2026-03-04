@@ -1080,7 +1080,7 @@ if(!validate()) return;
 try{
 
 const res = await axios.post(
-"http://127.0.0.1:5000/api/register",
+"https://ai-student-performance-analysis-5.onrender.com/register",
 form
 );
 

@@ -1062,7 +1062,7 @@ function CollegeForm() {
   const fetchHistory = async () => {
     try {
       const res = await axios.get(
-        "http://127.0.0.1:5000/api/student/history",
+        "https://ai-student-performance-analysis-5.onrender.com/api/student/history",
         {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("token")
@@ -1082,7 +1082,7 @@ function CollegeForm() {
   const handlePredict = async () => {
     try {
       const res = await axios.post(
-        "http://127.0.0.1:5000/api/student/predict",
+        "https://ai-student-performance-analysis-5.onrender.com/api/student/predict",
         {
           ...form,
           education_level: "College"
