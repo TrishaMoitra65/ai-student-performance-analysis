@@ -1080,7 +1080,7 @@ if(!validate()) return;
 try{
 
 const res = await axios.post(
-"https://ai-student-performance-analysis-5.onrender.com/register",
+"https://ai-student-performance-analysis-5.onrender.com/api/register",
 form
 );
 

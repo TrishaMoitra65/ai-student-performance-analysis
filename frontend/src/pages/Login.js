@@ -168,7 +168,7 @@ function Login() {
     try {
 
       const res = await axios.post(
-        "https://ai-student-performance-analysis-5.onrender.com/login",
+        "https://ai-student-performance-analysis-5.onrender.com/api/login",
         { username, password }
       );
 
