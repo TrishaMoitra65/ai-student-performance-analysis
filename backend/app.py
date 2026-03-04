@@ -1574,7 +1574,11 @@ from werkzeug.security import generate_password_hash, check_password_hash
 # ---------------- INIT ----------------
 
 app = Flask(__name__)
-CORS(app, origins=["https://ai-student-performance-analysis-9.onrender.com"])
+CORS(
+    app,
+    resources={r"/*": {"origins": "https://ai-student-performance-analysis-9.onrender.com"}},
+    supports_credentials=True
+)
 
 app.config["JWT_SECRET_KEY"] = "final-year-project-secret"
 jwt = JWTManager(app)
